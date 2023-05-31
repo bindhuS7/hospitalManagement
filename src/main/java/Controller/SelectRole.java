@@ -18,12 +18,12 @@ public class SelectRole extends HttpServlet {
 		
 		String role=req.getParameter("role");
 		
-		if(role.equals("staff")){
+		if(role.equals("staff"))
 			
 			req.getRequestDispatcher("staff.html").forward(req, resp);
-		}else{
+		else
 			req.getRequestDispatcher("doctor.html").forward(req, resp);
-		}
+		
 	}
 	
 }

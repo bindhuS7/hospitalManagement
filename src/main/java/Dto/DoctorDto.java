@@ -2,27 +2,28 @@ package Dto;
 
 import java.sql.Date;
 
-import javax.annotation.Generated;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 
 @Entity
-public class StaffDto  {
+public class DoctorDto {
 
 	@Id
-	@GeneratedValue(generator="staffid")
-	@SequenceGenerator(initialValue=121001,allocationSize=1,name="staffid",sequenceName="staffid")
+	@GeneratedValue(generator="doctorid")
+	@SequenceGenerator(initialValue=456001,allocationSize=1,name="doctorid",sequenceName="doctorid")
 	private int id;
-	String name;
-	String email;
-	String password;
-	long mobile;
-	 private Date  DOB;
+	private String name;
+    private long mobile;
+	private String email;
+	private String password;
+	private Date DOB;
 	 private String gender;
-	private int age;
-	private boolean status;
+		private int age;
+		private boolean status;
+	 private String qualification;
+	private String specialization;
 	public int getId() {
 		return id;
 	}
@@ -35,23 +36,23 @@ public class StaffDto  {
 	public void setName(String name) {
 		this.name = name;
 	}
+	public long getMobile() {
+		return mobile;
+	}
+	public void setMobile(long mobile) {
+		this.mobile = mobile;
+	}
 	public String getEmail() {
 		return email;
 	}
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getPassward() {
+	public String getPassword() {
 		return password;
 	}
-	public void setPassward(String password) {
+	public void setPassword(String password) {
 		this.password = password;
-	}
-	public long getMobile() {
-		return mobile;
-	}
-	public void setMobile(long mobile) {
-		this.mobile = mobile;
 	}
 	public Date getDOB() {
 		return DOB;
@@ -77,5 +78,16 @@ public class StaffDto  {
 	public void setStatus(boolean status) {
 		this.status = status;
 	}
-	
+	public String getQualification() {
+		return qualification;
+	}
+	public void setQualification(String qualification) {
+		this.qualification = qualification;
+	}
+	public String getSpecialization() {
+		return specialization;
+	}
+	public void setSpecialization(String specialization) {
+		this.specialization = specialization;
+	}
 }
